@@ -1,0 +1,52 @@
+
+tweets = [
+    "Wow, what a great day today!! #sunshine",
+    "I feel sad about the things going on around us. #covid19",
+    "I'm really excited to learn Python with @JovianML #zerotopandas",
+    "This is a really nice song. #linkinpark",
+    "The python programming language is useful for data science",
+    "Why do bad things happen to me?",
+    "Apple announces the release of the new iPhone 12. Fans are excited.",
+    "Spent my day with family!! #happy",
+    "Check out my blog post on common string operations in Python. #zerotopandas",
+    "Freecodecamp has great coding tutorials. #skillup"
+]
+happy_words = ['great', 'excited', 'happy', 'nice', 'wonderful', 'amazing', 'good', 'best']
+sad_words = ['sad', 'bad', 'tragic', 'unhappy', 'worst']
+# store the final answer in this variable
+number_of_happy_tweets = 0
+
+# perform the calculations here
+for word in happy_words:
+ for i in tweets:
+    if word in i:
+        number_of_happy_tweets=number_of_happy_tweets+1
+print("Number of happy tweets:", number_of_happy_tweets)
+happy_fraction = 6/10
+print("The fraction of happy tweets is:", happy_fraction)
+# Determine the number of tweets in the dataset that can be classified as sad.
+number_of_sad_tweets = 0
+
+# perform the calculations here
+for word in sad_words:
+    for i in tweets:
+        if word in i:
+             number_of_sad_tweets+=1
+print("Number of sad tweets:", number_of_sad_tweets)
+sad_fraction = 2/10
+print("The fraction of sad tweets is:", sad_fraction)
+#Calculate the sentiment score, which is defined as the difference betweek the fraction of happy tweets and the fraction of sad tweets
+sentiment_score = happy_fraction - sad_fraction 
+print("The sentiment score for the given tweets is", sentiment_score)
+# Display whether the overall sentiment of the given dataset of tweets is happy or sad, using the sentiment score
+if (sentiment_score>0.105):
+    print("The overall sentiment is Happy :)")
+else:
+    print("The overall sentiment is sad")
+# What is the fraction of tweets that are neutral i.e. neither happy nor sad
+number_of_neutral_tweets=10-(number_of_happy_tweets + number_of_sad_tweets)
+print("Number of neutral tweets:",number_of_neutral_tweets)
+neutral_fraction = 2/10
+print('The fraction of neutral tweets is', neutral_fraction)
+<img src="<img src="https://i.imgur.com/6CCIwCb.png">
+#what all are the limitations of this method? let us improve!
